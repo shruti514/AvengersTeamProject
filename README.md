@@ -1,5 +1,5 @@
 ## Using Auth0 with Servlets Example
-
+--test
 ### Prerequisites
  --test
 In order to run this example you will need to have Maven installed. You can install Maven with [brew](http://brew.sh/):
