@@ -1,3 +1,4 @@
 com/auth0/example/HomeServlet.class
-com/auth0/example/LoginServlet.class
 com/auth0/example/LogoutServlet.class
+com/auth0/example/LoginServlet.class
+edu/sjsu/cohort6/cloudservices/KoolTronServer.class
