@@ -9,24 +9,25 @@
     <url>http://maven.apache.org</url>
     <properties>
         <sql2o.version>1.5.4</sql2o.version>
-        <jettyVersion>9.0.2.v20130417</jettyVersion>
+        <jettyVersion>9.3.8.v20160314</jettyVersion>
         <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
         <auth0-servlet.version>2.1</auth0-servlet.version>
-        <jetty-servlet.version>9.3.2.v20150730</jetty-servlet.version>
+        <jetty-servlet.version>9.3.8.v20160314</jetty-servlet.version>
         <mysql-connector-java.version>5.1.6</mysql-connector-java.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${javax.servlet-api.version}</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
             <version>${jettyVersion}</version>
         </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>${javax.servlet-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
+
         <dependency>
             <groupId>com.auth0</groupId>
             <artifactId>auth0-servlet</artifactId>
@@ -47,6 +48,7 @@
             <artifactId>jetty-servlet</artifactId>
             <version>${jetty-servlet.version}</version>
         </dependency>
+
     </dependencies>
 
 
