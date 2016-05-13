@@ -13,7 +13,7 @@
         <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
         <auth0-servlet.version>2.1</auth0-servlet.version>
         <jetty-servlet.version>9.3.8.v20160314</jetty-servlet.version>
-        <mysql-connector-java.version>5.1.6</mysql-connector-java.version>
+        <mysql-connector-java.version>6.0.2</mysql-connector-java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -21,6 +21,11 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>${javax.servlet-api.version}</version>
             <!--<scope>provided</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -80,7 +85,7 @@
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
                     <server>TomcatServer</server>
-                    <path>/api.avengers</path>
+                    <path>/kooltron</path>
                 </configuration>
             </plugin>
             <plugin>
@@ -90,7 +95,7 @@
                 <configuration>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                     <webApp>
-                        <contextPath>/api.avengers</contextPath>
+                        <contextPath>/kooltron</contextPath>
                     </webApp>
                     <httpConnector>
                         <port>8888</port>

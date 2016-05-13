@@ -1,7 +1,7 @@
 <%@ page import="com.auth0.Auth0User" %>
 <%@ page import="edu.sjsu.cohort6.cloudservices.dao.Products" %>
 <%@ page import="java.util.List" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,7 +71,7 @@
     <div class="container-fluid">
       <nav class="pull">
         <ul class="nav">
-          <li><a href="index.html"> Home</a></li>
+         <li><a href="index.html"> Home</a></li>
           <li><a href="about.html"> About</a></li>
           <li><a href="dashboard.html" class="active"> Dashboard</a></li>
           <li><a href="contact.html"> Mail us</a></li>
@@ -98,22 +98,41 @@
 <!--Shortcodes-page -->
 <div class="codes">
   <div class="container">
-    <h3 class="hdng">Dashboard</h3>
-    <img src="<%=user.getPicture()%>"/>
-    <br />
-    Hello <%=user.getName()%>!</p>
-    <p>Your nickname is: <%=user.getNickname()%></p>
+    <table style="width:100%">
+      <tbody><tr>
+        <td>
+          <img src="<%=user.getPicture()%>"/>
+          <br />
+          Hello <%=user.getName()%>!</p>
+          <p>Your nickname is: <%=user.getNickname()%></p>
+        </td>
+        <td colspan="6">
+          <h3 class="hdng">Dashboard</h3>
+        </td>
+
+        <td>
+          <input type="button" class="btn btn-lg btn-primary btn-block" onclick="location.href='https://avengerskooltron.slack.com/';" value="Go to Slack">
+
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
+
+
+    <div>
+
+
+    </div>
     <div class="bs-docs-example">
       <table class="table table-hover">
         <thead>
         <tr>
-          <th>#</th>
           <th>Product Code</th>
           <th>Product Name</th>
           <th>Product Line</th>
           <th>product Vendor</th>
           <th>product Description</th>
-          <th>Quantity InStock</th>
           <th>Quantity InStock</th>
           <th>Buy Price</th>
           <th>MSRP</th>
