@@ -113,7 +113,7 @@
 
         </td>
         <td>
-          <input type="button" class="btn btn-primary" onclick="location.href='https://avengerskooltron.slack.com/';" value="Go to Slack">
+          <input type="button" class="btn btn-danger" onclick="location.href='https://avengerskooltron.slack.com/';" value="Go to Slack">
 
         </td>
         <td>
