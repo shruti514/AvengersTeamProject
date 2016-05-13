@@ -109,11 +109,20 @@
         <td colspan="6">
           <h3 class="hdng">Dashboard</h3>
         </td>
-
         <td>
-          <input type="button" class="btn btn-lg btn-primary btn-block" onclick="location.href='https://avengerskooltron.slack.com/';" value="Go to Slack">
 
         </td>
+        <td>
+          <input type="button" class="btn btn-primary" onclick="location.href='https://avengerskooltron.slack.com/';" value="Go to Slack">
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+          <input type="button" class="btn btn-primary" onclick="location.href='https://cmpe282-avengers.auth0.com/login?client=Lay944zkO31fUjUiLmhTKinLLhJjqvEB&protocol=samlp&state=&redirect_uri=&request_id=&prompt=';" value="Go to Dropbox">
+        </td>
+
       </tr>
 
       </tbody>
