@@ -137,39 +137,16 @@ public class Products extends BaseDAO {
         }
     }
 
-    public static List<Products> getAllold() {
+    public static Products getById(String id) {
         String sql =
-                "SELECT * FROM products";
+                "SELECT * FROM products where productCode=:id";
 
-        List<Products> products = new ArrayList<>();
-
-        Statement st = null;
-        try {
-            //st = connection.createStatement();
-            // execute the query, and get a java resultset
-            ResultSet rs = st.executeQuery(sql);
-
-            // iterate through the java resultset
-            while (rs.next())
-            {
-                int id = rs.getInt("id");
-                String firstName = rs.getString("first_name");
-                String lastName = rs.getString("last_name");
-                Date dateCreated = rs.getDate("date_created");
-                boolean isAdmin = rs.getBoolean("is_admin");
-                int numPoints = rs.getInt("num_points");
-
-                // print the results
-                System.out.format("%s, %s, %s, %s, %s, %s\n", id, firstName, lastName, dateCreated, isAdmin, numPoints);
-            }
-            st.close();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
+        try(Connection con = sql2o.open()) {
+            return con.createQuery(sql).addParameter("id", id).executeAndFetchFirst(Products.class);
         }
-
-        return  products;
     }
+
+
 
     public static void main(String[] args) {
         List<Products> productsList = Products.getAll();
