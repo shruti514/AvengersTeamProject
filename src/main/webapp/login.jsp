@@ -111,7 +111,7 @@
         <div class="row">
             <div class="col-sm-6 col-md-4 col-md-offset-4">
                 <div class="account-wall">
-                        <button class="btn btn-lg btn-primary btn-block" onclick="signin()">Hi! there, let's get started</button>
+                        <button class="btn btn-lg btn-primary btn-block" onclick="signin()">Hi! there, let's get started blah!</button>
                 </div>
             </div>
         </div>
