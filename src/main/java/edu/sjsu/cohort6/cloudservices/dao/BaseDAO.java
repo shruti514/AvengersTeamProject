@@ -16,21 +16,8 @@ import java.sql.SQLException;
  */
 public abstract class BaseDAO {
     protected static Sql2o sql2o;
-    //protected static Connection connection;
-
 
     static{
-        /*String url = "jdbc:mysql://kooltron-avengers-project.cft2jn9kud3b.us-west-2.rds.amazonaws.com:3306/";
-        String userName = "admin";
-        String password = "admincmpe282";
-        String dbName = "classicmodels";
-        String driver = "com.mysql.jdbc.Driver";
-        try {
-            Class.forName(driver);
-            connection = DriverManager.getConnection(url + dbName, userName, password);
-        } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }*/
         try {
             String driver = "com.mysql.jdbc.Driver";
             Class.forName(driver);
