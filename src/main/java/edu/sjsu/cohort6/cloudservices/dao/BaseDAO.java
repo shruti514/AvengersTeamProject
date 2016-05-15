@@ -21,7 +21,9 @@ public abstract class BaseDAO {
         try {
             String driver = "com.mysql.jdbc.Driver";
             Class.forName(driver);
-            sql2o = new Sql2o("jdbc:mysql://kooltron-avengers-project.cft2jn9kud3b.us-west-2.rds.amazonaws.com:3306/classicmodels?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "admin", "admincmpe282");
+            sql2o = new Sql2o("jdbc:mysql://kooltron-avengers-project.cft2jn9kud3b.us-west-2.rds.amazonaws.com:3306"+
+                    "/classicmodels?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false"+
+                            "&serverTimezone=UTC", "admin", "admincmpe282");
         }catch (Exception e){
             e.printStackTrace();
         }
